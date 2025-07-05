@@ -94,12 +94,13 @@ T_labels = ["Anderson-Darling",
 nTs = length(Ts);
 
 # list sample sizes
-ns = [20, 40, 60, 80, 100, 200, 400];
+ns = [20, 40, 60, 80, 100, 150, 200];
 nNs = length(ns);
 
 # set alpha level and number of simulations
 alpha = 0.05;
-n_sims = 10^5;
+n_sims = 10^4;
+# n_sims = 100
 
 power = zeros( nTs, nRs, nNs );
 cb_palette = [
@@ -143,7 +144,7 @@ else
 end
 
 # Create a new figure
-figure(figsize=(8, 36))
+figure(figsize=(8, 24))
 clf()
 
 n_row = 8
